@@ -1,0 +1,26 @@
+{
+  "name": "techcheat",
+  "version": "1.0.0",
+  "description": "Repository to save my notes regarding technical interviews.",
+  "main": "jest",
+  "scripts": {
+    "test": "jesz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizdotpro/TechCheat.git"
+  },
+  "keywords": [
+    "Tech",
+    "Interview",
+    "Jest",
+    "JS",
+    "Python"
+  ],
+  "author": "Luiz Carneiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luizdotpro/TechCheat/issues"
+  },
+  "homepage": "https://github.com/luizdotpro/TechCheat#readme"
+}
