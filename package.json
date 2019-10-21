@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/luizdotpro/TechCheat/issues"
   },
-  "homepage": "https://github.com/luizdotpro/TechCheat#readme"
+  "homepage": "https://github.com/luizdotpro/TechCheat#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }
