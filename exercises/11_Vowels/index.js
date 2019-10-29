@@ -8,7 +8,7 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-     return str.replace(/[^aeiouAEIOU]/g,'').length
+     return str.replace(/[^aeiou]/gi,'').length
 }
 
 module.exports = vowels;
