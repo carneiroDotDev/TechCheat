@@ -32,6 +32,9 @@ class LinkedList {
     }
 
     getLast() {
+        if (!this.head) {
+            return null
+        }
         let node = this.head
         while (node.next) {
             node = node.next
@@ -53,11 +56,11 @@ class LinkedList {
         if (!this.head) {
             return
         }
-        let node = this.head
-        if (!node.next) {
+        if (!this.head.next) {
             this.head = null
             return
         }
+        let node = this.head
         let previousNode = node
         let nextNode = node.next
         while (nextNode.next) {
@@ -66,12 +69,40 @@ class LinkedList {
         }
         previousNode.next = null
     }
+
+    insertLast(value) {
+        const lastNode = this.getLast()
+        if (lastNode) {
+            lastNode.next = new Node(value)
+        } else {
+            this.head = new Node(value)
+        }
+    }
+
+    getAt(index) {
+        if (!this.head) {
+            return null
+        }
+        // I would let this if statement because 
+        // we dont need then to do the folowwing variables 
+        // declarations. Even though, this check is repeated 
+        // in the next code block, since node could be = null. 
+        let counter = 0
+        let node = this.head
+        while (node) {
+            if (counter === index) {
+                return node
+            }
+            node = node.next
+            counter++
+        }
+        return null
+    }
 }
 
 const list = new LinkedList()
 list.head = new Node(12)
-list.insertFirst(new Node(34))
-list.insertFirst(new Node(56))
-list.removeLast()
+list.insertLast(34)
+list.insertLast(56)
 
 module.exports = { Node, LinkedList };
