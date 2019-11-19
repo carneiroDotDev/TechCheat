@@ -120,6 +120,25 @@ class LinkedList {
         }
         previousNode.next = nextNode
     }
+
+    insertAt(value, index) {
+        if (!this.head) {
+            this.head = new Node(value)
+            return
+        }
+
+        if (index === 0) {
+            this.head = new Node(value, this.head)
+            // The this.head still is the previous one which becomes the 
+            // next of the new node
+            return
+        }
+
+        const previousNode = this.getAt(index - 1) || this.getLast()
+        const node = this.getAt(index)
+        previousNode.next = new Node(value, node)
+        return
+    }
 }
 
 const list = new LinkedList()
