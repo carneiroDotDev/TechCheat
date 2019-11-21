@@ -144,6 +144,14 @@ class LinkedList {
         previousNode.next = new Node(value, node)
         return
     }
+
+    forEach(fn){
+        let node = this.head
+        while(node){
+            fn(node)
+            node = node.next
+        }
+    }
 }
 
 const list = new LinkedList()
