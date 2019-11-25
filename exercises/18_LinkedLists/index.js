@@ -145,11 +145,19 @@ class LinkedList {
         return
     }
 
-    forEach(fn){
+    forEach(fn) {
         let node = this.head
-        while(node){
+        while (node) {
             fn(node)
             node = node.next
+        }
+    }
+
+    *[Symbol.iterator]() {
+        let node = this.head;
+        while (node) {
+            yield node;
+            node = node.next;
         }
     }
 }
