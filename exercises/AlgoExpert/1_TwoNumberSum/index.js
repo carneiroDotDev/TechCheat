@@ -1,5 +1,5 @@
 
-function twoNumberSum() { }
+function twoNumberSum(arr, targetSum) { }
 
 // Not so performant:
 //
