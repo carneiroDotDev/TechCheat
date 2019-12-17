@@ -1,5 +1,8 @@
 
-function twoNumberSum(arr, targetSum) { }
+function twoNumberSum(arr, targetSum) {
+
+  const arr = []
+}
 
 // Not so performant:
 //
