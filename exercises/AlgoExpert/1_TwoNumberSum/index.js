@@ -1,6 +1,19 @@
 
-function twoNumberSum(arr, targetSum) {}
-// Not so performant:
+function twoNumberSum(array, targetSum) {
+  // Write your code here.
+  const obj = {}
+  const answer = []
+  for (let num of array) {
+    if (obj[targetsum - num]) {
+      answer.push((targetsum - num), num)
+    } else {
+      obj[targetsum - num] = true
+    }
+  }
+  return answer
+}
+
+// Not so performant O(n^2):
 //
 // function twoNumberSum(array, targetSum) {
 //   // Write your code here.
