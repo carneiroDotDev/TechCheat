@@ -18,5 +18,3 @@ function twoNumberSum(arr, targetSum) {}
 // Do not edit the line below.
 
 exports.twoNumberSum = twoNumberSum;
-
-//remove that 
