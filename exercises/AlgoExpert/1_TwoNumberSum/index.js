@@ -20,6 +20,8 @@ function twoNumberSum(array, targetSum) {
   return []
 }
 
+twoNumberSum([3, 4, -4, 8, 11, 1, -1, -6], 10) // [ 11, -1 ]
+
 // Optimal solution O(n), but O(n) because we are 
 // using a hashtable (js object)
 // function twoNumberSum(array, targetSum) {
@@ -35,8 +37,6 @@ function twoNumberSum(array, targetSum) {
 
 //   return []
 // }
-
-twoNumberSum([3, 4, -4, 8, 11, 1, -1, -6], 10) // [ 11, -1 ]
 
 // Not so performant O(n^2), but O(1) space because we are only:
 // assigning variables. 
