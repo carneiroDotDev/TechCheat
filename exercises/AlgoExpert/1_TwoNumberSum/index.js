@@ -1,20 +1,25 @@
 
+// Optimal solution O(n), but O(n) because we are 
+// using a hashtable (js object)
 function twoNumberSum(array, targetSum) {
   // Write your code here.
   const obj = {}
-  const answer = []
+
   for (let num of array) {
-    if (obj[targetsum - num]) {
-      answer.push((targetsum - num), num)
+    if (obj[targetSum - num]) {
+      return [(targetSum - num), num]
     } else {
-      obj[targetsum - num] = true
+      obj[num] = true
     }
   }
-  return answer
+
+  return []
 }
 
-// Not so performant O(n^2):
-//
+twoNumberSum([3, 4, -4, 8, 11, 1, -1, -6], 10) // [ 11, -1 ]
+
+// Not so performant O(n^2), but O(1) space because we are only:
+// assigning variables. 
 // function twoNumberSum(array, targetSum) {
 //   // Write your code here.
 // 	const answer = []
