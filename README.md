@@ -1,2 +1,2 @@
 # TechCheat
-Repository to save my notes regarding technical interviews. 
+Repository to save my notes regarding technical interviews... 
