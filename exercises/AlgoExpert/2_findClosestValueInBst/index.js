@@ -13,6 +13,7 @@ function findClosestValueInBst(tree, target, diff = undefined) {
   } else {
     diff = Math.abs(tree.value - target)
   }
+  console.log('tree -', tree)
 
   if (tree.value < target) {
     findClosestValueInBst(tree.right, target, diff)
