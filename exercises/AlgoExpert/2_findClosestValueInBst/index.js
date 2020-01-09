@@ -17,5 +17,4 @@ function findClosestValueInBst(tree, target, savedNode = undefined) {
 	  } 
   }
   
-  // Do not edit the line below.
   exports.findClosestValueInBst = findClosestValueInBst;
