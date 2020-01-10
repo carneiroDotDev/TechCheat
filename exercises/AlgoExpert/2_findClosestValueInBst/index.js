@@ -1,5 +1,4 @@
 function findClosestValueInBst(tree, target, savedNode = undefined) {
-	// Write your code here.
 	  if(tree.value === target){
 		  return tree.value
 	  }
