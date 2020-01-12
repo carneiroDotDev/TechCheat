@@ -21,7 +21,6 @@ function findClosestValueInBst(tree, target, savedNode = undefined) {
 exports.findClosestValueInBst = findClosestValueInBst;
 
 function findClosestValueInBst(tree, target, savedNode = undefined) {
-  // Write your code here.
 	let currentNode = tree
 	while(currentNode){	
 		if(currentNode.value === target){
