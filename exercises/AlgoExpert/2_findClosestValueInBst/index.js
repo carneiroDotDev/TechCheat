@@ -16,27 +16,26 @@ function findClosestValueInBst(tree, target, savedNode = undefined) {
   }
 }
 
-// Do not edit the line below.
-exports.findClosestValueInBst = findClosestValueInBst;
+// exports.findClosestValueInBst = findClosestValueInBst;
 
 function findClosestValueInBst(tree, target, savedNode = undefined) {
-	let currentNode = tree
-	while(currentNode){	
-		if(currentNode.value === target){
-		   return currentNode.value
-	    }
-		
-	  if(!savedNode || Math.abs(savedNode - target) > Math.abs(currentNode.value - target)){
-	  	savedNode = currentNode.value
-	  }
-		
-	  if(currentNode.value > target){
-			currentNode = currentNode.left
-	  } else {
-		  currentNode = currentNode.right 
-	  }
-	}
-	return savedNode
+  let currentNode = tree
+  while (currentNode) {
+    if (currentNode.value === target) {
+      return currentNode.value
+    }
+
+    if (!savedNode || Math.abs(savedNode - target) > Math.abs(currentNode.value - target)) {
+      savedNode = currentNode.value
+    }
+
+    if (currentNode.value > target) {
+      currentNode = currentNode.left
+    } else {
+      currentNode = currentNode.right
+    }
+  }
+  return savedNode
 }
 
 // Do not edit the line below.
