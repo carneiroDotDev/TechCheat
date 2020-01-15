@@ -38,5 +38,4 @@ function findClosestValueInBst(tree, target, savedNode = undefined) {
   return savedNode
 }
 
-// Do not edit the line below.
 exports.findClosestValueInBst = findClosestValueInBst;
