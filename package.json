@@ -4,7 +4,7 @@
   "description": "Repository to save my notes regarding technical interviews.",
   "main": "jest",
   "scripts": {
-    "test": "jesz"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
