@@ -13,16 +13,11 @@ class Node {
     return this;
   }
 
-  depthFirstSearch(array) {
+  depthFirstSearch(array = []) {
     // Write your code here.
-    let arr = new Array(this)
-    while (arr.length) {
-      array.push(arr[0].name)
-      if (arr[0].children) {
-        arr = [...arr[0].children, ...arr.slice(1)]
-      } else {
-        arr.shift()
-      }
+    array.push(this.name)
+    for (let node of this.children){
+      node.depthFirstSearch(array)
     }
     return array
   }
