@@ -14,7 +14,6 @@ class Node {
   }
 
   depthFirstSearch(array = []) {
-    // Write your code here
     // Speed - O(n) and Space - O(n)
     array.push(this.name)
     for (let node of this.children) {
