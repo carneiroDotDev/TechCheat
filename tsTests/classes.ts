@@ -14,4 +14,4 @@ class myClass implements id{
 
 const me = new myClass('Luiz')
 
-console.log(me.name)
+// console.log(me.name)
