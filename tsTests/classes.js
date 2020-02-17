@@ -1,8 +1,16 @@
 class myClass {
-    constructor(name) {
-        this.name = name;
-        this.address = name;
+    constructor(anything) {
+        this.address = 'Rio';
+        this.name = anything;
     }
 }
 const me = new myClass('Luiz');
-console.log(me.name);
+class abstractClass {
+    constructor() {
+        this.game = 'RE';
+    }
+}
+class videoGame extends abstractClass {
+}
+const meuVideoGame = new videoGame;
+console.log(meuVideoGame.game);

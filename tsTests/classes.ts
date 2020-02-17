@@ -5,13 +5,26 @@ interface id {
 
 class myClass implements id{
     public name: string
-    public address: string
+    readonly address: string = 'Rio'
     constructor(anything: string){
         this.name = anything
-        this.address = name
     }
 } 
 
 const me = new myClass('Luiz')
 
 // console.log(me.name)
+
+abstract class abstractClass {
+    public game: string
+    constructor(){
+        this.game = 'RE'
+    }
+}
+
+// const init = new abstractClass
+
+class videoGame extends abstractClass {}
+
+const meuVideoGame = new videoGame
+console.log(meuVideoGame.game)
