@@ -28,3 +28,6 @@ class videoGame extends abstractClass {}
 
 const meuVideoGame = new videoGame
 console.log(meuVideoGame.game)
+
+var a = 'a'
+console.log(a)
