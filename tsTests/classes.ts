@@ -22,7 +22,7 @@ abstract class abstractClass {
     }
 }
 
-// const init = new abstractClass
+// const init = new abstractClass //error
 
 class videoGame extends abstractClass {}
 
@@ -31,3 +31,37 @@ console.log(meuVideoGame.game)
 
 var a = 'a'
 console.log(a)
+
+
+
+class A {
+    private x: number;
+    protected y: number;
+
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
+
+    getX(): number {
+        return this.x;
+    }
+
+    getY(): number {
+        return this.y;
+    }
+
+    setY(): void{
+        this.y = 12
+    }
+}
+
+class B extends A {
+    // multiply(): number {
+    //     return this.x * this.y;
+    // }
+}
+
+const anything = new A(2,4)
+
+// anything.y // error - y is protected
