@@ -11,6 +11,8 @@ class myClass implements id{
     }
 } 
 
+// implements is used by a calss to implement einen interface
+
 const me = new myClass('Luiz')
 
 // console.log(me.name)
