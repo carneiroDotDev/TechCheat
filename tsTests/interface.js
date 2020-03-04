@@ -1,9 +1,17 @@
-const buzz = {
+var _this = this;
+var buzz = {
     a: 'aaa'
 };
-const boo = () => { console.log('works'); };
-const obj1 = {
-    name: 'Luiz',
-    shouldWork: () => { console.log(this); }
+var boo = function () { console.log('works'); };
+var foo = {
+    'Luiz': 'Paulo'
 };
-obj1.shouldWork.call(obj1);
+var obj1 = {
+    shouldWork: function () {
+        console.log('hello', _this);
+    },
+    paulo: true
+};
+if (typeof obj1.shouldWork === 'function') {
+    obj1.shouldWork.call(obj1);
+}

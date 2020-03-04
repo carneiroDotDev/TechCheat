@@ -1,7 +1,3 @@
-interface test1 {
-    shouldWork: () => void;
-    name: string
-}
 
 const buzz: buildAString = {
     a: 'aaa'
@@ -14,19 +10,30 @@ type buildAString = {
 }
 
 
-const boo: test2 = () => { console.log('works')}
-interface test2 {
+const boo: test2 = () => { console.log('works') }
+type test2 = {
     (): void;
+}
+interface test1 {
+    [key: string]: (() => void) | boolean;
+}
+
+const foo = {
+    'Luiz': 'Paulo'
 }
 
 const obj1: test1 = {
-    name: 'Luiz',
-    shouldWork: () => { console.log(this) }
+    shouldWork: () => {
+        console.log('hello', this)
+    },
+    paulo: true
 }
 
-obj1.shouldWork.call(obj1)
+if (typeof obj1.shouldWork === 'function') {
+    obj1.shouldWork.call(obj1)
+}
 
 // boo()
 
 type myType = 1 | 2 | sayMyName
-interface sayMyName{ name: 'Luiz'}
+interface sayMyName { name: 'Luiz' }
