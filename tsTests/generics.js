@@ -1,44 +1,41 @@
-var obj = { variable: true, "var": "" };
-var saying = {
-    sayIt: function (arg1) { return arg1; }
+let obj = { variable: true, var: "" };
+const saying = {
+    sayIt: (arg1) => arg1,
 };
-console.log(saying.sayIt(1122));
-var stringFilter = function (val) { return typeof val === "number"; };
+const stringFilter = (val) => typeof val === "number";
 stringFilter(0);
 function test() {
     return function ok() {
         return "";
     };
 }
-// Generic extended
 function arrayToDict(array) {
-    var out = {};
-    array.forEach(function (val) {
+    const out = {};
+    array.forEach((val) => {
         out[val.id] = val;
     });
     return out;
 }
-var myDict = arrayToDict([
+const myDict = arrayToDict([
     { id: "a", value: "first", Luiz: "Carneiro" },
     { id: "b", value: "second", Luiz: "Carneiro" },
 ]);
-// console.log(myDict);
 function startTuple(a) {
     return function finishTuple(b) {
         return [a, b];
     };
 }
-var myTuple = startTuple(["first"])(33);
+const myTuple = startTuple(["first"])(33);
 function mapDict(obj, fn) {
-    var returnObj = {};
-    Object.keys(obj).forEach(function (key) {
-        var thisItem = obj[key];
-        if (typeof thisItem !== undefined) { //really nice tip when you still want values like '' or 0 to pass through
+    const returnObj = {};
+    Object.keys(obj).forEach((key) => {
+        const thisItem = obj[key];
+        if (typeof thisItem !== undefined) {
             returnObj[key] = fn(thisItem);
         }
     });
     return returnObj;
 }
-var result = mapDict({ name: 'Luiz', secondName: 'Paulo' }, function (arg) { return "*." + arg; });
-var result2 = mapDict({ age: 30 }, function (arg) { return arg + 1; });
+const result = mapDict({ name: 'Luiz', secondName: 'Paulo' }, (arg) => `*.${arg}`);
+const result2 = mapDict({ age: 30 }, (arg) => arg + 1);
 console.log(result2);

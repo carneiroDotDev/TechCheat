@@ -1,14 +1,13 @@
-var _this = this;
-var buzz = {
+const buzz = {
     a: 'aaa'
 };
-var boo = function () { console.log('works'); };
-var foo = {
+const boo = () => { console.log('works'); };
+const foo = {
     'Luiz': 'Paulo'
 };
-var obj1 = {
-    shouldWork: function () {
-        console.log('hello', _this);
+const obj1 = {
+    shouldWork: () => {
+        console.log('hello', this);
     },
     paulo: true
 };
