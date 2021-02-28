@@ -1,0 +1,19 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "plugin:@typescript-eslint/recommended", // Use recommended rules of @typescript-eslint/eslint-plugin
+        "plugin:prettier/recommended",
+        "eslint-config-prettier",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2018, 
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console": ["error"],
+        "@typescript-eslint/prefer-interface": "off",
+        "no-restricted-imports": ["error"],
+        "@typescript-eslint/ban-ts-ignore": "off"
+    }
+}
