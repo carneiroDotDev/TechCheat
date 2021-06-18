@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "CommonJS",
     "target": "ESNext",
-    "noEmit": true,
+    "noEmit": false,
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
